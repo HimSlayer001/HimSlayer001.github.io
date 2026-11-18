@@ -73,7 +73,11 @@ footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);text-a
 <h1>Kanav Sooden</h1>
 <div class="type" id="type"></div>
 <div class="cta"><a class="btn p" href="#projects">See my work</a><a class="btn" href="https://github.com/HimSlayer001">GitHub</a><a class="btn" href="mailto:kasooden@gmail.com">Say hi</a></div>
-<div class="stats" id="stats"></div>
+<div class="stats">
+<div class="stat"><b>100%</b><span>local-first LLM apps</span></div>
+<div class="stat"><b>5</b><span>measured eval dimensions</span></div>
+<div class="stat"><b>3</b><span>languages: Python, C++, Java</span></div>
+</div>
 </header>
 
 <section id="about" class="wrap reveal">
@@ -145,9 +149,7 @@ document.getElementById("filters").onclick=e=>{const f=e.target.dataset.f;if(!f)
  document.querySelectorAll("#projects-grid .card").forEach(c=>c.hidden=f!=="all"&&c.dataset.c!==f)};
 const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add("in")),{threshold:.1});
 document.querySelectorAll(".reveal").forEach(e=>io.observe(e));
-fetch("https://api.github.com/users/HimSlayer001").then(r=>r.json()).then(u=>{
- if(u.public_repos===undefined)return;
- document.getElementById("stats").innerHTML=[[u.public_repos,"public repos"],[u.followers,"followers"],[new Date().getFullYear()-new Date(u.created_at).getFullYear()+"+","years on GitHub"]].map(([n,t])=>`<div class="stat"><b>${n}</b><span>${t}</span></div>`).join("")}).catch(()=>{});
+
 </script>
 </body>
 </html>
