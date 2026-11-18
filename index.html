@@ -61,7 +61,7 @@ footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);text-a
 
 <section id="about" class="wrap reveal">
 <h2><small>01 / ABOUT</small>Atom | Byte | Gene</h2>
-<p class="lead">I'm a developer based in Hyderabad who likes to understand things from the atom up: how a shell parses a command, how a retriever ranks a document, how a seizure shows up in an EEG trace. I work where applied AI, systems programming and a bit of science overlap, and I care about measuring what I build, because a system I can't evaluate is one I can't trust.</p>
+<p class="lead">I'm a developer based in Hyderabad who likes to understand things from the atom up: how a shell parses a command, how a retriever ranks a document, how a seizure shows up in an EEG trace. My main focus is AI agents, and I'm going deeper into systems programming, distributed systems and search, and I care about measuring what I build, because a system I can't evaluate is one I can't trust.</p>
 </section>
 
 <section id="projects" class="wrap reveal">
@@ -80,6 +80,7 @@ footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);text-a
 <h2><small>03 / SKILLS</small>Toolbox</h2>
 <div class="grid">
 <div class="card"><h3>applied_ai</h3><div class="chips"><span class="chip">RAG</span><span class="chip">hybrid retrieval</span><span class="chip">tool calling</span><span class="chip">guardrails</span><span class="chip">local LLMs</span></div></div>
+<div class="card"><h3>exploring_next</h3><div class="chips"><span class="chip">distributed systems</span><span class="chip">search &amp; IR</span><span class="chip">inverted indexes</span><span class="chip">replication</span></div></div>
 <div class="card"><h3>languages</h3><div class="chips"><span class="chip">Python</span><span class="chip">C++</span><span class="chip">Java</span><span class="chip">Shell</span></div></div>
 <div class="card"><h3>systems_and_data</h3><div class="chips"><span class="chip">POSIX shell internals</span><span class="chip">SQLite</span><span class="chip">Docker</span><span class="chip">CMake</span><span class="chip">Git</span></div></div>
 <div class="card"><h3>practice</h3><div class="chips"><span class="chip">pytest</span><span class="chip">mypy</span><span class="chip">ruff</span><span class="chip">evals</span></div></div>
@@ -95,7 +96,7 @@ footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);text-a
 <footer>© <span id="yr"></span> Kanav Sooden · Hyderabad, India</footer>
 
 <script>
-const lines=["local-first LLM agents","RAG, tool calling & evals","a POSIX shell in C++","tools that measure themselves"];
+const lines=["AI agents that run locally","RAG, tool calling & evals","systems & distributed search","a POSIX shell in C++"];
 const el=document.getElementById("type");let l=0,c=0,d=false;
 function tick(){const s=lines[l];el.textContent=s.slice(0,c);
  if(!d&&c++===s.length){d=true;return setTimeout(tick,1400)}
