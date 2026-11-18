@@ -5,6 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Kanav Sooden · Portfolio</title>
 <meta name="description" content="Kanav Sooden: developer building local-first LLM agents, RAG pipelines and systems tools in Python and C++.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9A%9B%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<meta property="og:title" content="Kanav Sooden · Portfolio">
+<meta property="og:description" content="AI agents, RAG and systems programming. Hyderabad, India.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0b1218">
 <style>
 :root{--bg:#0b1218;--panel:#111c26;--line:#1f3140;--text:#e6eef5;--muted:#8fa5b6;--accent:#4fc3f7;--accent2:#7c4dff}
 :root[data-theme="light"]{--bg:#f5f8fb;--panel:#fff;--line:#d9e3ec;--text:#12202c;--muted:#556b7d;--accent:#0277bd;--accent2:#5e35b1}
@@ -40,6 +45,18 @@ h2{font-size:28px;margin:0 0 6px}h2 small{display:block;font:14px ui-monospace,M
 .stat{flex:1;min-width:140px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 18px}
 .stat b{font-size:28px;color:var(--accent)}.stat span{display:block;color:var(--muted);font-size:13px}
 .skills .card h3{font-size:15px;font-family:ui-monospace,Menlo,monospace;color:var(--accent)}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.filters button{background:var(--panel);border:1px solid var(--line);color:var(--muted);border-radius:99px;padding:5px 14px;cursor:pointer;font:13px ui-monospace,Menlo,monospace}
+.filters button.on{color:#fff;background:linear-gradient(90deg,var(--accent),var(--accent2));border-color:transparent}
+.badge{float:right;font:11px ui-monospace,Menlo,monospace;padding:2px 8px;border-radius:99px;border:1px solid var(--line);color:var(--muted)}
+.badge.live{color:#66bb6a;border-color:#66bb6a}.badge.wip{color:#ffb74d;border-color:#ffb74d}
+.card[hidden]{display:none}
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:20px;font:13px ui-monospace,Menlo,monospace}
+.flow span{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:8px 12px}
+.flow i{color:var(--accent);font-style:normal}
+.tl{border-left:2px solid var(--line);margin:24px 0 0 6px;padding-left:20px}
+.tl div{position:relative;margin-bottom:18px}.tl div::before{content:"";position:absolute;left:-27px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--accent)}
+.tl b{display:block}.tl span{color:var(--muted);font-size:14px}
 footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);text-align:center;font-size:14px}
 .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s,transform .6s}.reveal.in{opacity:1;transform:none}
 @media(max-width:600px){nav ul{display:none}.hero{padding-top:56px}}
@@ -48,7 +65,7 @@ footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);text-a
 </head>
 <body>
 <nav><div class="wrap"><b>~/kanav</b>
-<ul><li><a href="#about">About</a></li><li><a href="#projects">Projects</a></li><li><a href="#skills">Skills</a></li><li><a href="#contact">Contact</a></li></ul>
+<ul><li><a href="#about">About</a></li><li><a href="#projects">Projects</a></li><li><a href="#focus">Focus</a></li><li><a href="#skills">Skills</a></li><li><a href="#contact">Contact</a></li></ul>
 <button id="theme" aria-label="Toggle theme">◐</button></div></nav>
 
 <header class="hero wrap">
@@ -66,13 +83,29 @@ footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);text-a
 
 <section id="projects" class="wrap reveal">
 <h2><small>02 / PROJECTS</small>Things I've built</h2>
-<div class="grid">
-<a class="card" href="https://github.com/HimSlayer001/helpdesk-agent"><h3>helpdesk-agent</h3><p>IT Service Desk agent: answers from a knowledge base with RAG, acts via tool calling (tickets, service status), blocks prompt injection before the LLM is called, runs fully on-device with Ollama, and ships with an evaluation harness.</p><div class="chips"><span class="chip">Python</span><span class="chip">RAG</span><span class="chip">Ollama</span><span class="chip">SQLite</span><span class="chip">Docker</span></div></a>
-<a class="card" href="https://github.com/HimSlayer001/rag_to_riches"><h3>rag_to_riches</h3><p>A from-the-basics Retrieval-Augmented Generation pipeline: dataset, indexing and embedding, query, then LLM response.</p><div class="chips"><span class="chip">Python</span><span class="chip">Embeddings</span><span class="chip">LLM</span></div></a>
-<a class="card" href="https://github.com/HimSlayer001/cpp_shell"><h3>cpp_shell</h3><p>A POSIX-compliant shell in C++: command parsing, external programs and builtins like cd, pwd and echo.</p><div class="chips"><span class="chip">C++</span><span class="chip">CMake</span><span class="chip">Systems</span></div></a>
-<a class="card" href="https://github.com/HimSlayer001/cliLogger"><h3>logsleuth (cliLogger)</h3><p>A command-line log analyzer: parse log files into typed entries, filter by level and time, and summarise error patterns. Actively in development.</p><div class="chips"><span class="chip">Python</span><span class="chip">CLI</span><span class="chip">pytest</span><span class="chip">mypy</span></div></a>
-<a class="card" href="https://github.com/HimSlayer001/EEG_SignalProcessing"><h3>EEG_SignalProcessing</h3><p>EEG signal processing and seizure detection, applying software engineering to biomedical signals.</p><div class="chips"><span class="chip">Signal processing</span><span class="chip">Biomedical</span></div></a>
-<a class="card" href="https://github.com/HimSlayer001/HereWeGoAgain_DSA"><h3>HereWeGoAgain_DSA</h3><p>NeetCode solutions in modern C++, with an emphasis on readability, correctness and time/space complexity.</p><div class="chips"><span class="chip">C++</span><span class="chip">DSA</span></div></a>
+<div class="filters" id="filters"><button class="on" data-f="all">All</button><button data-f="ai">AI</button><button data-f="systems">Systems</button><button data-f="dsa">Algorithms</button></div>
+<div class="grid" id="projects-grid">
+<a class="card" data-c="ai" href="https://github.com/HimSlayer001/helpdesk-agent"><span class="badge live">flagship</span><h3>helpdesk-agent</h3><p>IT Service Desk agent: answers from a knowledge base with RAG, acts via tool calling (raise or look up tickets, check service status), blocks prompt injection before the LLM is called, runs fully on-device with Ollama, and ships with an evaluation harness.</p><div class="chips"><span class="chip">Python</span><span class="chip">RAG</span><span class="chip">Ollama</span><span class="chip">SQLite</span><span class="chip">Docker</span></div></a>
+<a class="card" data-c="systems" href="https://github.com/HimSlayer001/cpp_shell"><h3>cpp_shell</h3><p>A POSIX-compliant shell in C++: command parsing, external programs and builtins like cd, pwd and echo.</p><div class="chips"><span class="chip">C++</span><span class="chip">CMake</span><span class="chip">Systems</span></div></a>
+<a class="card" data-c="systems" href="https://github.com/HimSlayer001/cliLogger"><span class="badge wip">in progress</span><h3>logsleuth</h3><p>A command-line log analyzer: parse log files into typed entries, filter by level and time, and summarise error patterns.</p><div class="chips"><span class="chip">Python</span><span class="chip">CLI</span><span class="chip">pytest</span><span class="chip">mypy</span></div></a>
+<a class="card" data-c="ai" href="https://github.com/HimSlayer001/rag_to_riches"><span class="badge wip">in progress</span><h3>rag_to_riches</h3><p>RAG built from first principles to understand each part: dataset loading, cosine-similarity retrieval, and local embeddings with Ollama.</p><div class="chips"><span class="chip">Python</span><span class="chip">NumPy</span><span class="chip">Ollama</span></div></a>
+<a class="card" data-c="systems" href="https://github.com/HimSlayer001/floo"><h3>floo</h3><p>Desktop floor plan designer in Java Swing: rooms, doors, windows, furniture and fixtures on a grid canvas, with save and load.</p><div class="chips"><span class="chip">Java</span><span class="chip">Swing</span><span class="chip">GUI</span></div></a>
+<a class="card" data-c="dsa" href="https://github.com/HimSlayer001/HereWeGoAgain_DSA"><h3>HereWeGoAgain_DSA</h3><p>NeetCode solutions in modern C++, with an emphasis on readability, correctness and time/space complexity.</p><div class="chips"><span class="chip">C++</span><span class="chip">DSA</span></div></a>
+</div>
+</section>
+
+<section id="agent" class="wrap reveal">
+<h2><small>FEATURED</small>How helpdesk-agent works</h2>
+<p class="lead">Safety first, then retrieval, then action. Every stage is measured by an evaluation harness.</p>
+<div class="flow"><span>question</span><i>→</i><span>guardrails: injection check + redaction</span><i>→</i><span>hybrid retrieval: BM25 + embeddings, RRF</span><i>→</i><span>local LLM (Ollama)</span><i>⇄</i><span>tools: create_ticket · check_service_status · get_ticket</span></div>
+</section>
+
+<section id="focus" class="wrap reveal">
+<h2><small>FOCUS</small>Where I'm headed</h2>
+<div class="tl">
+<div><b>Now: AI agents</b><span>Retrieval, tool calling, guardrails and evals, all local-first.</span></div>
+<div><b>Next: systems &amp; distributed search</b><span>Inverted indexes, ranking, sharding and replication. Building toward it project by project.</span></div>
+<div><b>Always: fundamentals</b><span>A steady NeetCode run in C++ to keep algorithms sharp.</span></div>
 </div>
 </section>
 
@@ -107,6 +140,9 @@ document.getElementById("yr").textContent=new Date().getFullYear();
 const root=document.documentElement;
 try{const t=localStorage.getItem("theme");if(t)root.dataset.theme=t}catch(e){}
 document.getElementById("theme").onclick=()=>{const n=root.dataset.theme==="light"?"dark":"light";root.dataset.theme=n;try{localStorage.setItem("theme",n)}catch(e){}};
+document.getElementById("filters").onclick=e=>{const f=e.target.dataset.f;if(!f)return;
+ document.querySelectorAll("#filters button").forEach(b=>b.classList.toggle("on",b===e.target));
+ document.querySelectorAll("#projects-grid .card").forEach(c=>c.hidden=f!=="all"&&c.dataset.c!==f)};
 const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add("in")),{threshold:.1});
 document.querySelectorAll(".reveal").forEach(e=>io.observe(e));
 fetch("https://api.github.com/users/HimSlayer001").then(r=>r.json()).then(u=>{
