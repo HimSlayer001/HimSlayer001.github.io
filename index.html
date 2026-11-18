@@ -3,153 +3,285 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kanav Sooden · Portfolio</title>
-<meta name="description" content="Kanav Sooden, software engineering intern at Nutanix. AI agents, RAG and systems projects in Python and C++.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9A%9B%EF%B8%8F%3C/text%3E%3C/svg%3E">
-<meta property="og:title" content="Kanav Sooden · Portfolio">
-<meta property="og:description" content="AI agents, RAG and systems programming. Hyderabad, India.">
-<meta property="og:type" content="website">
-<meta name="theme-color" content="#0b1218">
+<title>Kanav Sooden</title>
+<meta name="description" content="Kanav Sooden, software engineering intern at Nutanix. Storage systems, AI agents and search, written in Python and C++.">
+<meta name="theme-color" content="#e9ece8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231d3fd8'/%3E%3Cpath d='M9 8h4v7l7-7h5l-8 8 8 8h-5l-7-7v7H9z' fill='%23e9ece8'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&display=swap">
 <style>
-:root{--bg:#0b1218;--panel:#111c26;--line:#1f3140;--text:#e6eef5;--muted:#8fa5b6;--accent:#4fc3f7;--accent2:#7c4dff}
-:root[data-theme="light"]{--bg:#f5f8fb;--panel:#fff;--line:#d9e3ec;--text:#12202c;--muted:#556b7d;--accent:#0277bd;--accent2:#5e35b1}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-body::before{content:"";position:fixed;inset:0;background:radial-gradient(600px 400px at 85% -5%,color-mix(in srgb,var(--accent2) 22%,transparent),transparent),radial-gradient(500px 400px at -5% 30%,color-mix(in srgb,var(--accent) 18%,transparent),transparent);pointer-events:none;z-index:-1}
-a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
-.wrap{max-width:1000px;margin:0 auto;padding:0 16px}
-nav{position:sticky;top:0;backdrop-filter:blur(10px);background:color-mix(in srgb,var(--bg) 80%,transparent);border-bottom:1px solid var(--line);z-index:5}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
-nav b{font-family:ui-monospace,Menlo,monospace;color:var(--accent)}
-nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0;font-size:14px}
-nav button{background:none;border:1px solid var(--line);color:var(--text);border-radius:8px;padding:4px 10px;cursor:pointer}
-.hero{padding:96px 0 64px}
-.tag{font-family:ui-monospace,Menlo,monospace;color:var(--accent);font-size:14px;letter-spacing:.08em}
-h1{font-size:clamp(40px,8vw,72px);line-height:1.05;margin:8px 0 12px;background:linear-gradient(90deg,var(--text),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
-.type{font-family:ui-monospace,Menlo,monospace;font-size:clamp(16px,3vw,22px);color:var(--muted);min-height:1.6em}
-.type::after{content:"▌";color:var(--accent);animation:b 1s steps(1) infinite}@keyframes b{50%{opacity:0}}
-.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-.btn{padding:10px 18px;border-radius:10px;border:1px solid var(--line);font-weight:600;color:var(--text)}
-.btn.p{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#fff;border:0}.btn:hover{text-decoration:none;transform:translateY(-2px)}
-.btn{transition:transform .15s}
-section{padding:56px 0}
-h2{font-size:28px;margin:0 0 6px}h2 small{display:block;font:14px ui-monospace,Menlo,monospace;color:var(--accent);letter-spacing:.08em;margin-bottom:4px}
-.lead{color:var(--muted);max-width:720px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:24px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px;transition:transform .2s,border-color .2s}
-.card:hover{transform:translateY(-4px);border-color:var(--accent)}
-.card h3{margin:0 0 6px;font-size:18px}.card p{margin:0 0 12px;color:var(--muted);font-size:15px}
-.chips{display:flex;flex-wrap:wrap;gap:6px}
-.chip{font:12px ui-monospace,Menlo,monospace;padding:3px 9px;border-radius:99px;border:1px solid var(--line);color:var(--accent)}
-.stats{display:flex;gap:16px;flex-wrap:wrap;margin-top:20px}
-.stat{flex:1;min-width:140px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 18px}
-.stat b{font-size:28px;color:var(--accent)}.stat span{display:block;color:var(--muted);font-size:13px}
-.skills .card h3{font-size:15px;font-family:ui-monospace,Menlo,monospace;color:var(--accent)}
-.filters{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
-.filters button{background:var(--panel);border:1px solid var(--line);color:var(--muted);border-radius:99px;padding:5px 14px;cursor:pointer;font:13px ui-monospace,Menlo,monospace}
-.filters button.on{color:#fff;background:linear-gradient(90deg,var(--accent),var(--accent2));border-color:transparent}
-.badge{float:right;font:11px ui-monospace,Menlo,monospace;padding:2px 8px;border-radius:99px;border:1px solid var(--line);color:var(--muted)}
-.badge.live{color:#66bb6a;border-color:#66bb6a}.badge.wip{color:#ffb74d;border-color:#ffb74d}
-.card[hidden]{display:none}
-.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:20px;font:13px ui-monospace,Menlo,monospace}
-.flow span{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:8px 12px}
-.flow i{color:var(--accent);font-style:normal}
-.tl{border-left:2px solid var(--line);margin:24px 0 0 6px;padding-left:20px}
-.tl div{position:relative;margin-bottom:18px}.tl div::before{content:"";position:absolute;left:-27px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--accent)}
-.tl b{display:block}.tl span{color:var(--muted);font-size:14px}
-footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);text-align:center;font-size:14px}
-.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s,transform .6s}.reveal.in{opacity:1;transform:none}
-@media(max-width:600px){nav ul{display:none}.hero{padding-top:56px}}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+/* Layout: a hexdump margin. Each section sits at a byte offset equal to the size of the text before it. */
+:root{
+  --paper:#e9ece8; --ink:#13171a; --mute:#5b6560; --rule:#c5cbc6; --accent:#1d3fd8; --wash:#dde2dd;
+  --display:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --body:"Newsreader",Georgia,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  --pad:max(16px,env(safe-area-inset-left,0px));
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#0f1315; --ink:#e4e8e2; --mute:#8d9992; --rule:#273033; --accent:#8da2ff; --wash:#171d20; color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#0f1315; --ink:#e4e8e2; --mute:#8d9992; --rule:#273033; --accent:#8da2ff; --wash:#171d20; color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 clamp(1.05rem,.98rem + .3vw,1.2rem)/1.55 var(--body);font-optical-sizing:auto;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:inherit;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:.2em}
+a:hover{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1180px;margin:0 auto}
+.mono{font-family:var(--mono);font-size:.78rem;letter-spacing:.02em}
+.label{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+
+/* top bar */
+header.bar{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:20px;border-bottom:1px solid var(--rule)}
+header.bar nav{display:flex;gap:22px;flex-wrap:wrap}
+header.bar a{font-family:var(--mono);font-size:.78rem;text-decoration:none;color:var(--mute)}
+header.bar a:hover{color:var(--accent)}
+#theme{font:500 .72rem var(--mono);letter-spacing:.08em;background:none;border:1px solid var(--rule);color:var(--ink);padding:6px 10px;cursor:pointer}
+#theme:hover{border-color:var(--accent);color:var(--accent)}
+
+/* hero */
+.hero{padding-block:clamp(40px,8vw,96px) clamp(36px,6vw,72px)}
+h1{margin:0;font:800 clamp(3rem,13.5vw,9.5rem)/.88 var(--display);font-stretch:125%;letter-spacing:-.035em;text-transform:uppercase}
+h1 span{display:block}
+h1 span+span{color:transparent;-webkit-text-stroke:2px var(--ink);padding-left:.12em}
+.hero-grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(24px,5vw,72px);margin-top:clamp(28px,5vw,56px);align-items:end}
+.lede{font-size:clamp(1.3rem,1rem + 1.2vw,1.9rem);line-height:1.28;font-weight:350;margin:0;max-width:30ch;text-wrap:balance}
+.lede em{font-style:italic;color:var(--accent)}
+.dump{background:var(--wash);border:1px solid var(--rule);padding:14px 16px;overflow-x:auto}
+.dump-row{display:flex;gap:14px;font:400 .74rem/1.9 var(--mono);white-space:nowrap}
+.dump-row b{font-weight:500;color:var(--mute)}
+.dump-hex{display:inline-flex;gap:.7ch;min-width:calc(16 * 2.7ch)}
+.dump-hex span{transition:color .15s}
+.dump-hex span:hover{color:var(--accent)}
+.dump-row i{font-style:normal;color:var(--accent)}
+.dump-cap{margin:10px 0 0}
+
+/* sections: offset rail + content */
+section{display:grid;grid-template-columns:9.5rem minmax(0,1fr);gap:clamp(16px,4vw,56px);padding-block:clamp(36px,6vw,72px);border-top:1px solid var(--rule)}
+.rail{font-family:var(--mono);font-size:.74rem;color:var(--mute);line-height:1.7}
+.rail b{display:block;color:var(--accent);font-weight:500}
+.rail .stick{position:sticky;top:20px}
+h2{margin:0 0 .6em;font:700 clamp(1.5rem,1.1rem + 1.6vw,2.4rem)/1.05 var(--display);font-stretch:112%;letter-spacing:-.02em;text-wrap:balance}
+p{margin:0 0 1em;max-width:62ch}
+
+/* now */
+.now{display:grid;gap:0;max-width:760px}
+.now div{display:grid;grid-template-columns:minmax(0,11rem) minmax(0,1fr);gap:20px;padding-block:18px;border-bottom:1px solid var(--rule)}
+.now div:first-child{padding-top:0}
+.now dt{font:500 .74rem var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--accent);padding-top:.35em}
+.now dd{margin:0}
+.now dl,.now{margin:0}
+
+/* spec table of projects */
+.specs{width:100%;border-collapse:collapse;font-size:1rem}
+.specs caption{text-align:left;padding-bottom:14px}
+.specs th{font:500 .7rem var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--mute);text-align:left;padding:0 16px 10px 0;border-bottom:2px solid var(--ink)}
+.specs td{padding:18px 16px 18px 0;border-bottom:1px solid var(--rule);vertical-align:top}
+.specs td:first-child{font:700 1.1rem var(--display);font-stretch:110%;white-space:nowrap}
+.specs td:first-child a{text-decoration:none}
+.specs tr:hover td{background:var(--wash)}
+.specs tr:hover td:first-child a{color:var(--accent)}
+.stack{font:400 .78rem/1.6 var(--mono);color:var(--mute)}
+.state{font:500 .72rem var(--mono);letter-spacing:.06em;white-space:nowrap}
+.state::before{content:"";display:inline-block;width:.6em;height:.6em;margin-right:.55em;border-radius:50%;background:var(--mute)}
+.state.ship::before{background:var(--accent)}
+.state.wip::before{background:transparent;border:2px solid var(--accent)}
+.tablewrap{overflow-x:auto}
+
+/* pipeline diagram */
+.pipe{margin:22px 0 0;border:1px solid var(--rule);padding:18px;overflow-x:auto;background:var(--wash)}
+.pipe svg{display:block;min-width:760px;width:100%;height:auto}
+.pipe .box{fill:var(--paper);stroke:var(--ink);stroke-width:1.5}
+.pipe .hot{fill:var(--paper);stroke:var(--accent);stroke-width:2.5}
+.pipe text{fill:var(--ink);font:500 12px var(--mono)}
+.pipe .sub{fill:var(--mute);font-size:10.5px;font-weight:400}
+.pipe .arrow{stroke:var(--ink);stroke-width:1.5;fill:none}
+.pipe .arrowhead{fill:var(--ink)}
+.pipe .acc{stroke:var(--accent)}
+.pipe .acch{fill:var(--accent)}
+
+/* field notes */
+.note{max-width:62ch}
+.note h3{margin:0 0 .4em;font:700 1.15rem/1.2 var(--display);font-stretch:108%}
+code{font:500 .86em var(--mono);background:var(--wash);padding:.12em .4em}
+
+/* contact */
+.mail{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:0 0 18px}
+.mail .addr{font:700 clamp(1.3rem,.9rem + 2vw,2.3rem) var(--display);font-stretch:112%;letter-spacing:-.02em;word-break:break-all}
+.copy{font:500 .72rem var(--mono);letter-spacing:.08em;background:var(--ink);color:var(--paper);border:0;padding:9px 14px;cursor:pointer}
+.copy:hover{background:var(--accent);color:#fff}
+.links{display:flex;gap:26px;flex-wrap:wrap;font-family:var(--mono);font-size:.82rem}
+footer{padding-block:32px 48px;border-top:1px solid var(--rule);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+@media (max-width:820px){
+  header.bar{flex-wrap:wrap}
+  header.bar .label{flex:1 1 100%}
+  header.bar nav{flex:1}
+  .hero-grid{grid-template-columns:minmax(0,1fr)}
+  section{grid-template-columns:minmax(0,1fr);gap:10px}
+  .rail{display:flex;gap:14px;align-items:baseline}
+  .rail .stick{position:static;display:flex;gap:14px}
+  .rail b{display:inline}
+  .now div{grid-template-columns:minmax(0,1fr);gap:4px}
+  .specs thead{display:none}
+  .specs,.specs tbody,.specs tr,.specs td{display:block;width:100%}
+  .specs tr{padding:16px 0;border-bottom:1px solid var(--rule)}
+  .specs td{padding:2px 0;border:0}
+  .specs td:first-child{white-space:normal}
+  .specs tr:hover td{background:none}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 </style>
 </head>
 <body>
-<nav><div class="wrap"><b>~/kanav</b>
-<ul><li><a href="#about">About</a></li><li><a href="#projects">Projects</a></li><li><a href="#focus">Focus</a></li><li><a href="#skills">Skills</a></li><li><a href="#contact">Contact</a></li></ul>
-<button id="theme" aria-label="Toggle theme">◐</button></div></nav>
+<div class="wrap">
 
-<header class="hero wrap">
-<div class="tag">SOFTWARE ENGINEERING INTERN · NUTANIX</div>
-<h1>Kanav Sooden</h1>
-<div class="type" id="type"></div>
-<div class="cta"><a class="btn p" href="#projects">See my work</a><a class="btn" href="https://github.com/HimSlayer001">GitHub</a><a class="btn" href="mailto:kasooden@gmail.com">Say hi</a></div>
-<div class="stats">
-<div class="stat"><b>100%</b><span>local-first LLM apps</span></div>
-<div class="stat"><b>5</b><span>measured eval dimensions</span></div>
-<div class="stat"><b>3</b><span>languages: Python, C++, Java</span></div>
-</div>
+<header class="bar">
+  <span class="label">kanav sooden / hyderabad</span>
+  <nav aria-label="Sections"><a href="#now">now</a><a href="#work">work</a><a href="#notes">notes</a><a href="#contact">contact</a></nav>
+  <button id="theme" type="button" aria-label="Switch colour theme">THEME</button>
 </header>
 
-<section id="about" class="wrap reveal">
-<h2><small>01 / ABOUT</small>Hi, I'm Kanav</h2>
-<p class="lead">I'm interning at Nutanix right now. Outside work I build things to see how they actually function: a shell, a retriever, a log parser. Lately that's mostly AI agents (answering from real documents, calling tools, failing safely), and I'm reading into distributed systems and search for what comes next. I like measuring what I build; if I can't test it, I don't trust it.</p>
-</section>
-
-<section id="projects" class="wrap reveal">
-<h2><small>02 / PROJECTS</small>Things I've built</h2>
-<div class="filters" id="filters"><button class="on" data-f="all">All</button><button data-f="ai">AI</button><button data-f="systems">Systems</button><button data-f="dsa">Algorithms</button></div>
-<div class="grid" id="projects-grid">
-<a class="card" data-c="ai" href="https://github.com/HimSlayer001/helpdesk-agent"><span class="badge live">flagship</span><h3>helpdesk-agent</h3><p>IT Service Desk agent: answers from a knowledge base with RAG, acts via tool calling (raise or look up tickets, check service status), blocks prompt injection before the LLM is called, runs fully on-device with Ollama, and ships with an evaluation harness.</p><div class="chips"><span class="chip">Python</span><span class="chip">RAG</span><span class="chip">Ollama</span><span class="chip">SQLite</span><span class="chip">Docker</span></div></a>
-<a class="card" data-c="systems" href="https://github.com/HimSlayer001/cpp_shell"><h3>cpp_shell</h3><p>A POSIX-compliant shell in C++: command parsing, external programs and builtins like cd, pwd and echo.</p><div class="chips"><span class="chip">C++</span><span class="chip">CMake</span><span class="chip">Systems</span></div></a>
-<a class="card" data-c="systems" href="https://github.com/HimSlayer001/cliLogger"><span class="badge wip">in progress</span><h3>logsleuth</h3><p>A command-line log analyzer: parse log files into typed entries, filter by level and time, and summarise error patterns.</p><div class="chips"><span class="chip">Python</span><span class="chip">CLI</span><span class="chip">pytest</span><span class="chip">mypy</span></div></a>
-<a class="card" data-c="ai" href="https://github.com/HimSlayer001/rag_to_riches"><span class="badge wip">in progress</span><h3>rag_to_riches</h3><p>RAG built from first principles to understand each part: dataset loading, cosine-similarity retrieval, and local embeddings with Ollama.</p><div class="chips"><span class="chip">Python</span><span class="chip">NumPy</span><span class="chip">Ollama</span></div></a>
-<a class="card" data-c="systems" href="https://github.com/HimSlayer001/floo"><h3>floo</h3><p>Desktop floor plan designer in Java Swing: rooms, doors, windows, furniture and fixtures on a grid canvas, with save and load.</p><div class="chips"><span class="chip">Java</span><span class="chip">Swing</span><span class="chip">GUI</span></div></a>
-<a class="card" data-c="dsa" href="https://github.com/HimSlayer001/HereWeGoAgain_DSA"><h3>HereWeGoAgain_DSA</h3><p>NeetCode solutions in modern C++, with an emphasis on readability, correctness and time/space complexity.</p><div class="chips"><span class="chip">C++</span><span class="chip">DSA</span></div></a>
+<main>
+<div class="hero">
+  <h1><span>Kanav</span><span>Sooden</span></h1>
+  <div class="hero-grid">
+    <p class="lede">Intern at Nutanix, building storage software. On my own time I write <em>agents that answer from real documents</em> and tools that measure themselves.</p>
+    <div>
+      <div class="dump" role="img" aria-label="Hex dump of the text Atom, Byte, Gene">
+<div class="dump-row"><b>00000000</b><span class="dump-hex"><span>41</span><span>74</span><span>6f</span><span>6d</span><span>20</span><span>7c</span><span>20</span><span>42</span><span>79</span><span>74</span><span>65</span><span>20</span><span>7c</span><span>20</span><span>47</span><span>65</span></span><i>|Atom | Byte | Ge|</i></div>
+<div class="dump-row"><b>00000010</b><span class="dump-hex"><span>6e</span><span>65</span></span><i>|ne|</i></div>
+      </div>
+      <p class="label dump-cap">xxd of my bio line. Atom, byte, gene.</p>
+    </div>
+  </div>
 </div>
+
+<section id="now" data-off>
+  <div class="rail"><div class="stick"><b class="off">0x000000</b><span>now</span></div></div>
+  <div>
+    <h2>What I'm doing at the moment</h2>
+    <dl class="now">
+      <div><dt>Day job</dt><dd>Software engineering intern at <strong>Nutanix</strong>, working on storage systems.</dd></div>
+      <div><dt>On my own</dt><dd>An IT help desk agent that runs on a laptop, retrieves from a knowledge base, calls tools and refuses prompt injection. It has an evaluation harness, so I know when a change makes it worse.</dd></div>
+      <div><dt>Reading</dt><dd>How distributed systems and search actually work: inverted indexes, ranking, sharding, replication. My next projects go there.</dd></div>
+    </dl>
+  </div>
 </section>
 
-<section id="agent" class="wrap reveal">
-<h2><small>FEATURED</small>How helpdesk-agent works</h2>
-<p class="lead">Safety first, then retrieval, then action. Every stage is measured by an evaluation harness.</p>
-<div class="flow"><span>question</span><i>→</i><span>guardrails: injection check + redaction</span><i>→</i><span>hybrid retrieval: BM25 + embeddings, RRF</span><i>→</i><span>local LLM (Ollama)</span><i>⇄</i><span>tools: create_ticket · check_service_status · get_ticket</span></div>
+<section id="work" data-off>
+  <div class="rail"><div class="stick"><b class="off">0x000000</b><span>work</span></div></div>
+  <div>
+    <h2>Projects</h2>
+    <div class="tablewrap">
+    <table class="specs">
+      <caption class="label">Source is on GitHub. Every name links to its repository.</caption>
+      <thead><tr><th>Project</th><th>What it is</th><th>Built with</th><th>State</th></tr></thead>
+      <tbody>
+        <tr><td><a href="https://github.com/HimSlayer001/helpdesk-agent">helpdesk-agent</a></td><td>IT service desk agent. Answers from runbooks with citations, raises and looks up tickets through tools, blocks prompt injection before the model runs. Fully local.</td><td class="stack">Python · Ollama · SQLite · Docker</td><td><span class="state ship">working</span></td></tr>
+        <tr><td><a href="https://github.com/HimSlayer001/cpp_shell">cpp_shell</a></td><td>A POSIX shell: parsing, external programs, builtins.</td><td class="stack">C++ · CMake</td><td><span class="state ship">working</span></td></tr>
+        <tr><td><a href="https://github.com/HimSlayer001/cliLogger">logsleuth</a></td><td>Command-line log analyzer. Typed entries, level and time filters, error summaries.</td><td class="stack">Python · pytest · mypy</td><td><span class="state wip">in progress</span></td></tr>
+        <tr><td><a href="https://github.com/HimSlayer001/rag_to_riches">rag_to_riches</a></td><td>Retrieval-augmented generation written from first principles to learn each part.</td><td class="stack">Python · NumPy · Ollama</td><td><span class="state wip">in progress</span></td></tr>
+        <tr><td><a href="https://github.com/HimSlayer001/floo">floo</a></td><td>Desktop floor plan designer: rooms, doors, windows, furniture, save and load.</td><td class="stack">Java · Swing</td><td><span class="state ship">working</span></td></tr>
+        <tr><td><a href="https://github.com/HimSlayer001/HereWeGoAgain_DSA">HereWeGoAgain_DSA</a></td><td>NeetCode solutions, written for clarity and checked for complexity.</td><td class="stack">C++</td><td><span class="state wip">ongoing</span></td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h2 style="margin-top:2.2em">How helpdesk-agent answers a question</h2>
+    <p>Safety runs first, so a hostile message never reaches the model. Retrieval combines keyword and embedding rankings. Tools change state only after the model asks for them.</p>
+    <div class="pipe">
+      <svg viewBox="0 0 960 170" role="img" aria-label="Pipeline: question, guardrails, hybrid retrieval, local model, tools">
+        <defs>
+          <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="arrowhead"/></marker>
+          <marker id="ahc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="acch"/></marker>
+        </defs>
+        <rect class="box" x="8" y="50" width="120" height="64"/>
+        <text x="68" y="78" text-anchor="middle">question</text>
+        <text class="sub" x="68" y="96" text-anchor="middle">employee asks</text>
+
+        <rect class="hot" x="176" y="50" width="170" height="64"/>
+        <text x="261" y="76" text-anchor="middle">guardrails</text>
+        <text class="sub" x="261" y="94" text-anchor="middle">injection check</text>
+        <text class="sub" x="261" y="107" text-anchor="middle">secret redaction</text>
+
+        <rect class="box" x="394" y="50" width="190" height="64"/>
+        <text x="489" y="76" text-anchor="middle">hybrid retrieval</text>
+        <text class="sub" x="489" y="94" text-anchor="middle">BM25 + embeddings</text>
+        <text class="sub" x="489" y="107" text-anchor="middle">fused with RRF, top 3</text>
+
+        <rect class="box" x="632" y="50" width="140" height="64"/>
+        <text x="702" y="78" text-anchor="middle">local LLM</text>
+        <text class="sub" x="702" y="96" text-anchor="middle">cites its source</text>
+
+        <rect class="box" x="820" y="14" width="132" height="142"/>
+        <text x="886" y="40" text-anchor="middle">tools</text>
+        <text class="sub" x="886" y="66" text-anchor="middle">create_ticket</text>
+        <text class="sub" x="886" y="86" text-anchor="middle">check_service</text>
+        <text class="sub" x="886" y="106" text-anchor="middle">get_ticket</text>
+        <text class="sub" x="886" y="136" text-anchor="middle">SQLite</text>
+
+        <path class="arrow" d="M128 82H174" marker-end="url(#ah)"/>
+        <path class="arrow acc" d="M346 82H392" marker-end="url(#ahc)"/>
+        <path class="arrow" d="M584 82H630" marker-end="url(#ah)"/>
+        <path class="arrow" d="M772 82H818" marker-start="url(#ah)" marker-end="url(#ah)"/>
+        <path class="arrow acc" d="M261 114V150H68V122" stroke-dasharray="4 4" marker-end="url(#ahc)"/>
+        <text class="sub" x="164" y="164" text-anchor="middle">blocked: refused, model never called</text>
+      </svg>
+    </div>
+    <p class="label" style="margin-top:12px">Scored on a labelled question set: retrieval, tool choice, citations, injection blocking, latency.</p>
+  </div>
 </section>
 
-<section id="focus" class="wrap reveal">
-<h2><small>FOCUS</small>Where I'm headed</h2>
-<div class="tl">
-<div><b>Now: AI agents</b><span>Retrieval, tool calling, guardrails and evals, all local-first.</span></div>
-<div><b>Next: systems &amp; distributed search</b><span>Inverted indexes, ranking, sharding and replication. Building toward it project by project.</span></div>
-<div><b>Always: fundamentals</b><span>A steady NeetCode run in C++ to keep algorithms sharp.</span></div>
+<section id="notes" data-off>
+  <div class="rail"><div class="stick"><b class="off">0x000000</b><span>notes</span></div></div>
+  <div class="note">
+    <h2>Field notes</h2>
+    <h3>When export wrote a file that import refused</h3>
+    <p>Testing <code>nvme-cli</code> TLS pre-shared keys, I exported a key from the kernel keyring and could not import the file back. The cause was two version numbers being confused. The export step wrote the key's <em>identity</em> version (0 or 1) into the <code>NVMeTLSkey-N</code> prefix, while import only accepts the <em>interchange format</em> version, which is always 1. A default key came out as <code>NVMeTLSkey-0</code> and was rejected. I traced it through the source and found the fix already on master. It is not in a tagged release yet.</p>
+    <p class="label">linux-nvme/nvme-cli, commit 9eb6c9e95</p>
+  </div>
+</section>
+
+<section id="contact" data-off>
+  <div class="rail"><div class="stick"><b class="off">0x000000</b><span>contact</span></div></div>
+  <div>
+    <h2>Get in touch</h2>
+    <div class="mail"><span class="addr" id="addr">kasooden@gmail.com</span><button class="copy" id="copy" type="button">COPY</button></div>
+    <div class="links"><a href="https://github.com/HimSlayer001">github.com/HimSlayer001</a></div>
+  </div>
+</section>
+</main>
+
+<footer class="label"><span>Hyderabad, India</span><span>Set in Archivo, Newsreader and IBM Plex Mono</span></footer>
 </div>
-</section>
-
-<section id="skills" class="wrap skills reveal">
-<h2><small>03 / SKILLS</small>Toolbox</h2>
-<div class="grid">
-<div class="card"><h3>applied_ai</h3><div class="chips"><span class="chip">RAG</span><span class="chip">hybrid retrieval</span><span class="chip">tool calling</span><span class="chip">guardrails</span><span class="chip">local LLMs</span></div></div>
-<div class="card"><h3>exploring_next</h3><div class="chips"><span class="chip">distributed systems</span><span class="chip">search &amp; IR</span><span class="chip">inverted indexes</span><span class="chip">replication</span></div></div>
-<div class="card"><h3>languages</h3><div class="chips"><span class="chip">Python</span><span class="chip">C++</span><span class="chip">Java</span><span class="chip">Shell</span></div></div>
-<div class="card"><h3>systems_and_data</h3><div class="chips"><span class="chip">POSIX shell internals</span><span class="chip">SQLite</span><span class="chip">Docker</span><span class="chip">CMake</span><span class="chip">Git</span></div></div>
-<div class="card"><h3>practice</h3><div class="chips"><span class="chip">pytest</span><span class="chip">mypy</span><span class="chip">ruff</span><span class="chip">evals</span></div></div>
-</div>
-</section>
-
-<section id="contact" class="wrap reveal">
-<h2><small>04 / CONTACT</small>Let's build something</h2>
-<p class="lead">Open to interesting problems and conversations.</p>
-<div class="cta"><a class="btn p" href="mailto:kasooden@gmail.com">kasooden@gmail.com</a><a class="btn" href="https://github.com/HimSlayer001">github.com/HimSlayer001</a></div>
-</section>
-
-<footer>© <span id="yr"></span> Kanav Sooden · Hyderabad, India</footer>
 
 <script>
-const lines=["AI agents that run locally","RAG, tool calling & evals","systems & distributed search","a POSIX shell in C++"];
-const el=document.getElementById("type");let l=0,c=0,d=false;
-function tick(){const s=lines[l];el.textContent=s.slice(0,c);
- if(!d&&c++===s.length){d=true;return setTimeout(tick,1400)}
- if(d&&c--===0){d=false;l=(l+1)%lines.length}
- setTimeout(tick,d?30:60)}
-tick();
-document.getElementById("yr").textContent=new Date().getFullYear();
-const root=document.documentElement;
-try{const t=localStorage.getItem("theme");if(t)root.dataset.theme=t}catch(e){}
-document.getElementById("theme").onclick=()=>{const n=root.dataset.theme==="light"?"dark":"light";root.dataset.theme=n;try{localStorage.setItem("theme",n)}catch(e){}};
-document.getElementById("filters").onclick=e=>{const f=e.target.dataset.f;if(!f)return;
- document.querySelectorAll("#filters button").forEach(b=>b.classList.toggle("on",b===e.target));
- document.querySelectorAll("#projects-grid .card").forEach(c=>c.hidden=f!=="all"&&c.dataset.c!==f)};
-const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add("in")),{threshold:.1});
-document.querySelectorAll(".reveal").forEach(e=>io.observe(e));
-
+/* Each section's offset is the byte length of the text before it, so the margin is a true address map of this page. */
+(function(){
+  var secs=document.querySelectorAll("section[data-off]"),total=0,enc=new TextEncoder();
+  secs.forEach(function(s){
+    var el=s.querySelector(".off");
+    if(el){el.textContent="0x"+total.toString(16).padStart(6,"0")}
+    total+=enc.encode(s.textContent.replace(/\s+/g," ")).length;
+  });
+})();
+var root=document.documentElement;
+try{var saved=localStorage.getItem("theme");if(saved)root.dataset.theme=saved}catch(e){}
+document.getElementById("theme").addEventListener("click",function(){
+  var dark=root.dataset.theme?root.dataset.theme==="dark":matchMedia("(prefers-color-scheme: dark)").matches;
+  var next=dark?"light":"dark";root.dataset.theme=next;
+  try{localStorage.setItem("theme",next)}catch(e){}
+});
+document.getElementById("copy").addEventListener("click",function(){
+  var b=this,t=document.getElementById("addr").textContent;
+  function done(m){b.textContent=m;setTimeout(function(){b.textContent="COPY"},1600)}
+  if(navigator.clipboard){navigator.clipboard.writeText(t).then(function(){done("COPIED")},function(){done("SELECT + COPY")})}
+  else{done("SELECT + COPY")}
+});
 </script>
 </body>
 </html>
